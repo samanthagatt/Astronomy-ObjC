@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Sol Collection View Controller-->
         <scene sceneID="N6m-MC-HK6">
             <objects>
-                <collectionViewController id="zll-1W-ODM" sceneMemberID="viewController">
+                <collectionViewController id="zll-1W-ODM" customClass="SolCollectionViewController" customModule="Astronomy_ObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Owv-Ia-lNs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ppv-tN-UTQ">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="ppv-tN-UTQ">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="trailing" secondItem="R7V-MN-luu" secondAttribute="trailing" id="ngW-pc-fBs"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="J3Y-9d-Wys" kind="show" id="D40-uN-mQs"/>
+                                    <segue destination="J3Y-9d-Wys" kind="show" identifier="ShowPhotoDetail" id="D40-uN-mQs"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -62,7 +62,7 @@
         <!--Title-->
         <scene sceneID="dRm-4A-PMk">
             <objects>
-                <viewController id="J3Y-9d-Wys" sceneMemberID="viewController">
+                <viewController id="J3Y-9d-Wys" customClass="PhotoDetailViewController" customModule="Astronomy_ObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2KP-5N-8qN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,22 +71,25 @@
                                 <rect key="frame" x="16" y="80" width="343" height="571"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="254" image="MarsPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="BJN-5h-H0C">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="450"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BJN-5h-H0C" secondAttribute="height" multiplier="1:1" id="JZo-G6-LzD"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Taken by &lt;Rover&gt; on &lt;date&gt; (Sol &lt;sol&gt;)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFc-aA-a01">
-                                        <rect key="frame" x="0.0" y="458" width="309" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="351" width="309" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Camera: &lt;Camera&gt;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyL-SE-YPx">
-                                        <rect key="frame" x="0.0" y="486.5" width="149.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="379.5" width="149.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-q8-rZG">
-                                        <rect key="frame" x="0.0" y="515" width="343" height="56"/>
+                                        <rect key="frame" x="0.0" y="408" width="343" height="163"/>
                                         <state key="normal" title="Save to Photo Library"/>
                                     </button>
                                 </subviews>
