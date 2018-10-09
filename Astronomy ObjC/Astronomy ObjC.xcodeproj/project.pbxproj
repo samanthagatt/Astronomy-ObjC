@@ -14,6 +14,11 @@
 		22D11738216D38F500A7B98B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D11737216D38F500A7B98B /* main.m */; };
 		22D11743216D3D3200A7B98B /* SolCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D11742216D3D3200A7B98B /* SolCollectionViewController.swift */; };
 		22D11745216D3DF300A7B98B /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D11744216D3DF300A7B98B /* PhotoDetailViewController.swift */; };
+		22D1174B216D3FCC00A7B98B /* SMFMarsPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D1174A216D3FCC00A7B98B /* SMFMarsPhoto.m */; };
+		22D1174D216D401C00A7B98B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1174C216D401C00A7B98B /* Camera.swift */; };
+		22D11750216D411B00A7B98B /* SMFSolDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D1174F216D411B00A7B98B /* SMFSolDescription.m */; };
+		22D11753216D59BE00A7B98B /* SMFMarsRover.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D11752216D59BE00A7B98B /* SMFMarsRover.m */; };
+		22D11756216D619D00A7B98B /* SMFCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D11755216D619D00A7B98B /* SMFCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,15 @@
 		22D11741216D3D3200A7B98B /* Astronomy ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astronomy ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 		22D11742216D3D3200A7B98B /* SolCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolCollectionViewController.swift; sourceTree = "<group>"; };
 		22D11744216D3DF300A7B98B /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		22D11749216D3FCC00A7B98B /* SMFMarsPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFMarsPhoto.h; sourceTree = "<group>"; };
+		22D1174A216D3FCC00A7B98B /* SMFMarsPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFMarsPhoto.m; sourceTree = "<group>"; };
+		22D1174C216D401C00A7B98B /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		22D1174E216D411B00A7B98B /* SMFSolDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFSolDescription.h; sourceTree = "<group>"; };
+		22D1174F216D411B00A7B98B /* SMFSolDescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFSolDescription.m; sourceTree = "<group>"; };
+		22D11751216D59BE00A7B98B /* SMFMarsRover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFMarsRover.h; sourceTree = "<group>"; };
+		22D11752216D59BE00A7B98B /* SMFMarsRover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFMarsRover.m; sourceTree = "<group>"; };
+		22D11754216D619D00A7B98B /* SMFCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFCache.h; sourceTree = "<group>"; };
+		22D11755216D619D00A7B98B /* SMFCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,9 @@
 			children = (
 				22D11728216D38F300A7B98B /* AppDelegate.h */,
 				22D11729216D38F300A7B98B /* AppDelegate.m */,
+				22D11754216D619D00A7B98B /* SMFCache.h */,
+				22D11755216D619D00A7B98B /* SMFCache.m */,
+				22D11746216D3F8E00A7B98B /* Models */,
 				22D11742216D3D3200A7B98B /* SolCollectionViewController.swift */,
 				22D11744216D3DF300A7B98B /* PhotoDetailViewController.swift */,
 				22D1172E216D38F300A7B98B /* Main.storyboard */,
@@ -72,6 +89,20 @@
 				22D11741216D3D3200A7B98B /* Astronomy ObjC-Bridging-Header.h */,
 			);
 			path = "Astronomy ObjC";
+			sourceTree = "<group>";
+		};
+		22D11746216D3F8E00A7B98B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22D1174C216D401C00A7B98B /* Camera.swift */,
+				22D1174E216D411B00A7B98B /* SMFSolDescription.h */,
+				22D1174F216D411B00A7B98B /* SMFSolDescription.m */,
+				22D11751216D59BE00A7B98B /* SMFMarsRover.h */,
+				22D11752216D59BE00A7B98B /* SMFMarsRover.m */,
+				22D11749216D3FCC00A7B98B /* SMFMarsPhoto.h */,
+				22D1174A216D3FCC00A7B98B /* SMFMarsPhoto.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D11753216D59BE00A7B98B /* SMFMarsRover.m in Sources */,
 				22D11745216D3DF300A7B98B /* PhotoDetailViewController.swift in Sources */,
+				22D1174B216D3FCC00A7B98B /* SMFMarsPhoto.m in Sources */,
+				22D1174D216D401C00A7B98B /* Camera.swift in Sources */,
 				22D11738216D38F500A7B98B /* main.m in Sources */,
 				22D1172A216D38F300A7B98B /* AppDelegate.m in Sources */,
+				22D11750216D411B00A7B98B /* SMFSolDescription.m in Sources */,
 				22D11743216D3D3200A7B98B /* SolCollectionViewController.swift in Sources */,
+				22D11756216D619D00A7B98B /* SMFCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
