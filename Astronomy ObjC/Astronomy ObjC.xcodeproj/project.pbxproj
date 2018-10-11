@@ -19,6 +19,9 @@
 		22D11750216D411B00A7B98B /* SMFSolDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D1174F216D411B00A7B98B /* SMFSolDescription.m */; };
 		22D11753216D59BE00A7B98B /* SMFMarsRover.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D11752216D59BE00A7B98B /* SMFMarsRover.m */; };
 		22D11756216D619D00A7B98B /* SMFCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D11755216D619D00A7B98B /* SMFCache.m */; };
+		22D117A7216E7B3200A7B98B /* SMFConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D117A6216E7B3200A7B98B /* SMFConcurrentOperation.m */; };
+		22D117AB216EAFA800A7B98B /* SMFNetworkingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D117AA216EAFA800A7B98B /* SMFNetworkingClient.m */; };
+		22D117AE216EB65E00A7B98B /* SMFFetchImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D117AD216EB65E00A7B98B /* SMFFetchImageOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,12 @@
 		22D11752216D59BE00A7B98B /* SMFMarsRover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFMarsRover.m; sourceTree = "<group>"; };
 		22D11754216D619D00A7B98B /* SMFCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFCache.h; sourceTree = "<group>"; };
 		22D11755216D619D00A7B98B /* SMFCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFCache.m; sourceTree = "<group>"; };
+		22D117A5216E7B3200A7B98B /* SMFConcurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFConcurrentOperation.h; sourceTree = "<group>"; };
+		22D117A6216E7B3200A7B98B /* SMFConcurrentOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFConcurrentOperation.m; sourceTree = "<group>"; };
+		22D117A9216EAFA800A7B98B /* SMFNetworkingClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFNetworkingClient.h; sourceTree = "<group>"; };
+		22D117AA216EAFA800A7B98B /* SMFNetworkingClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFNetworkingClient.m; sourceTree = "<group>"; };
+		22D117AC216EB65E00A7B98B /* SMFFetchImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMFFetchImageOperation.h; sourceTree = "<group>"; };
+		22D117AD216EB65E00A7B98B /* SMFFetchImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMFFetchImageOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,8 @@
 				22D11754216D619D00A7B98B /* SMFCache.h */,
 				22D11755216D619D00A7B98B /* SMFCache.m */,
 				22D11746216D3F8E00A7B98B /* Models */,
+				22D117A8216EAF9000A7B98B /* Networking */,
+				22D117A4216E7AF700A7B98B /* Operatioins */,
 				22D11742216D3D3200A7B98B /* SolCollectionViewController.swift */,
 				22D11744216D3DF300A7B98B /* PhotoDetailViewController.swift */,
 				22D1172E216D38F300A7B98B /* Main.storyboard */,
@@ -103,6 +114,26 @@
 				22D1174A216D3FCC00A7B98B /* SMFMarsPhoto.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		22D117A4216E7AF700A7B98B /* Operatioins */ = {
+			isa = PBXGroup;
+			children = (
+				22D117A5216E7B3200A7B98B /* SMFConcurrentOperation.h */,
+				22D117A6216E7B3200A7B98B /* SMFConcurrentOperation.m */,
+				22D117AC216EB65E00A7B98B /* SMFFetchImageOperation.h */,
+				22D117AD216EB65E00A7B98B /* SMFFetchImageOperation.m */,
+			);
+			path = Operatioins;
+			sourceTree = "<group>";
+		};
+		22D117A8216EAF9000A7B98B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				22D117A9216EAFA800A7B98B /* SMFNetworkingClient.h */,
+				22D117AA216EAFA800A7B98B /* SMFNetworkingClient.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +162,7 @@
 		22D1171D216D38F300A7B98B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SMF;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Samantha Gatt";
 				TargetAttributes = {
@@ -179,11 +211,14 @@
 				22D11753216D59BE00A7B98B /* SMFMarsRover.m in Sources */,
 				22D11745216D3DF300A7B98B /* PhotoDetailViewController.swift in Sources */,
 				22D1174B216D3FCC00A7B98B /* SMFMarsPhoto.m in Sources */,
+				22D117A7216E7B3200A7B98B /* SMFConcurrentOperation.m in Sources */,
 				22D1174D216D401C00A7B98B /* Camera.swift in Sources */,
 				22D11738216D38F500A7B98B /* main.m in Sources */,
 				22D1172A216D38F300A7B98B /* AppDelegate.m in Sources */,
+				22D117AE216EB65E00A7B98B /* SMFFetchImageOperation.m in Sources */,
 				22D11750216D411B00A7B98B /* SMFSolDescription.m in Sources */,
 				22D11743216D3D3200A7B98B /* SolCollectionViewController.swift in Sources */,
+				22D117AB216EAFA800A7B98B /* SMFNetworkingClient.m in Sources */,
 				22D11756216D619D00A7B98B /* SMFCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
